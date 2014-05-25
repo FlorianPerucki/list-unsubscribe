@@ -31,6 +31,9 @@ function list_unsubscribe_schema() {
   );
 }
 
+/**
+ * Implements hook_enable().
+ */
 function list_unsubscribe_enable(){
   // Check if table exists, if not install the schema.
   if(db_table_exists('list_unsubscribe') {

@@ -10,17 +10,17 @@
 function list_unsubscribe_menu() {
   $items = array();
   $items['list-unsubscribe'] = array(
-          'page callback' => 'drupal_get_form',
-	  'page arguments' => array('list_unsubscribe_unsubscribe_email'),
-	  'description' => 'Unsubscribe from all email notifications',
-	  'access callback' => TRUE,
-  	  );
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('list_unsubscribe_unsubscribe_email'),
+    'description' => 'Unsubscribe from all email notifications',
+    'access callback' => TRUE,
+  );
   $items['list-unsubscribe/%'] = array(
-  	  'page callback' => 'list_unsubscribe_unsubscribe_email',
-	  'description' => 'Callback for the "unsubscribe" link in emails',
-  	  'page arguments' => array(1),
-	  'access callback' => TRUE,
-  	  );
+    'page callback' => 'list_unsubscribe_unsubscribe_email',
+    'description' => 'Callback for the "unsubscribe" link in emails',
+    'page arguments' => array(1),
+    'access callback' => TRUE,
+  );
   return $items;
 }
 

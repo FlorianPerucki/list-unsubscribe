@@ -15,9 +15,9 @@ function list_unsubscribe_unsubscribe_email($email){
   try {
     $query = db_insert('list_unsubscribe')
       ->fields(array(
-		     'email' => $email,
-		     'timestamp' => REQUEST_TIME,
-		     ))
+      'email' => $email,
+      'timestamp' => REQUEST_TIME,
+    ))
       ->execute();
   }
   catch(Exception $e) {
@@ -33,19 +33,18 @@ function list_unsubscribe_unsubscribe_email($email){
  */
 function list_unsubscribe_unsubscribe_email_form($form, $form_state){
   $form['mail'] = array(
-			'#type' => 'textfield',
-			'#title' => t('Email address'),
-			'#size' => 60,
-			'#required' => TRUE,
-			);
-
+    '#type' => 'textfield',
+    '#title' => t('Email address'),
+    '#size' => 60,
+    '#required' => TRUE,
+  );
   $form['actions'] = array(
-			   '#type' => 'actions'
-			   );
+    '#type' => 'actions'
+  );
   $form['actions']['submit'] = array(
-				     '#type' => 'submit',
-				     '#value' => t('Stop emailing me!'),
-				     );
+    '#type' => 'submit',
+    '#value' => t('Stop emailing me!'),
+  );
   return $form;
 }
 
@@ -53,7 +52,7 @@ function list_unsubscribe_unsubscribe_email_form($form, $form_state){
  * Form submit callback for unsubscribing an email address form
  */
 function list_unsubscribe_unsubscribe_email_form_submit($form, $form_state){
-   list_unsubscribe_unsubscribe_email($form_state['input']['mail']);
+  list_unsubscribe_unsubscribe_email($form_state['input']['mail']);
 }
 
 /** 

@@ -9,7 +9,6 @@
  */
 function list_unsubscribe_schema() {
   $schema = array();
-
   $schema['list_unsubscribe'] = array(
     'description' => 'The base table for pileflag entities.',
     'fields' => array(    

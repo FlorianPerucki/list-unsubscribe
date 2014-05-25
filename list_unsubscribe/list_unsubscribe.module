@@ -32,4 +32,6 @@ function list_unsubscribe_mail_alter(&$message) {
   if(_list_unsubscribe_email_check($message['to'])) {
     $message['send'] = FALSE; // This prevents the email from being sent
   }
+  global $base_url;
+  $message['headers']['List-unsubscribe'] = "<".$base_url."/list-unsubscribe/".$message['to'].">";
 }

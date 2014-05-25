@@ -9,4 +9,3 @@ Just having this feature may get your emails out of your users' spam folders, de
 For more infos, see here => http://www.list-unsubscribe.com/
 
 A similar module exists (https://drupal.org/project/unsubscribe) but it does not add the <List-Unsubscribe> header nor lets you add non-registered emails (i.e. emails which belongs to no registered user).
-

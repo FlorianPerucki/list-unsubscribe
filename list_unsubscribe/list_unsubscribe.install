@@ -24,9 +24,9 @@ function list_unsubscribe_schema() {
         'length' => 255,
         'not null' => TRUE,
       ),
-      'unique keys' => array(
-        'email' => array('email'),
-      ),
+    )
+    'unique keys' => array(
+      'email' => array('email'),
     ),
   );
 }

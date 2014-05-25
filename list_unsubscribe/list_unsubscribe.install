@@ -10,7 +10,7 @@
 function list_unsubscribe_schema() {
   $schema = array();
   $schema['list_unsubscribe'] = array(
-    'description' => 'The base table for pileflag entities.',
+    'description' => 'Email adresses that were unsubscribed.',
     'fields' => array(    
       'created' => array(
         'description' => 'The Unix timestamp when the email was unsubscribed.',

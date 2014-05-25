@@ -1,0 +1,33 @@
+<?php
+/**
+ * @file
+ * Install, update, and uninstall functions for the list-unsubscribe module.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function list_unsubscribe_schema() {
+  $schema = array();
+
+  $schema['list_unsubscribe'] = array(
+    'description' => 'The base table for pileflag entities.',
+    'fields' => array(    
+      'created' => array(
+        'description' => 'The Unix timestamp when the email was unsubscribed.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'email' => array(
+        'description' => 'The email to be unsubscribed.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+      ),
+      'unique keys' => array(
+        'email' => array('email'),
+      ),
+    ),
+  );
+}

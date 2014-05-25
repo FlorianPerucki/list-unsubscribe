@@ -1,0 +1,6 @@
+name = List Unsubscribe
+description = Adds the List-Unsubscribe header to every email sent from Drupal
+package = Mail
+core = 7.x
+dependencies[] = mailsystem
+project = "list_unsubscribe"

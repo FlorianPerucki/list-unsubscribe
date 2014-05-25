@@ -29,6 +29,7 @@ function list_unsubscribe_schema() {
       'email' => array('email'),
     ),
   );
+  return $schema;
 }
 
 /**
